@@ -235,3 +235,38 @@
     text-align: center;
 
 }
+.filter-con{
+    padding-right: 36px;
+    padding-left: 18px;
+    margin-bottom: 24px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+.filter-wrap{
+    padding-right:6px ;
+}
+.filter-btn{
+    display: flex;
+    padding: 9px 15px;
+    align-items: center;
+    border: 1px solid black;
+}
+.filter-icon{
+    height: 18px;
+    width: 18px;
+}
+.filter-text{
+    display: block;
+    margin-left: 3px;
+}
+.products-main{
+    padding-left: 18px;
+    padding-right: 18px;
+    position: relative;
+    overflow: auto hidden;
+
+}
+.products-container{
+    
+}
