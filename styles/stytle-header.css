@@ -21,6 +21,8 @@
 
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -49,7 +51,7 @@ button,
 div {
 
     /* font-family: "regular"; */
-    font-family:"Graphik Webfont", -apple-system, "Helvetica Neue", "Droid Sans", Arial, "sans-serif"
+    font-family: "Graphik Webfont", -apple-system, "Helvetica Neue", "Droid Sans", Arial, "sans-serif"
 
 }
 
@@ -395,14 +397,15 @@ li {
 }
 
 /* ------------------------------------------------ */
-.nav-last-wrap::after{
-        content: "";
-    border-bottom:  2px solid  #0e0e0e2e;
+.nav-last-wrap::after {
+    content: "";
+    border-bottom: 2px solid #0e0e0e2e;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
 }
+
 .nav-wrap {
     z-index: 50;
     position: relative;

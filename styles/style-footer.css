@@ -1,0 +1,363 @@
+.footer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    display: block;
+}
+
+.contact-container {
+    padding-bottom: 18px;
+    background: #ccebff;
+}
+
+.contact-wrap {
+    text-align: center;
+    padding-top: 36px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.contact-text {
+
+    margin-bottom: 18px;
+}
+
+.contact-text p {
+    letter-spacing: .08px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.contact-input-con {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.contact-input-wrap {
+    border-radius: 999999px;
+    background: #fff;
+    display: flex;
+    position: relative;
+    /* box-shadow: inset 1px 2px 4px #0e0e0e17; */
+}
+
+.footer-text {
+    letter-spacing: .16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.contact-input-wrap input {
+    padding: 8px 12px 8px 18px;
+    border-bottom-left-radius: 24px;
+    border-top-left-radius: 24px;
+    border-right: 0;
+    flex: 1;
+
+    border-color: #949494;
+    border-style: solid;
+    border-width: 1.5px;
+    columns: #222;
+    height: 48px;
+    width: 100%;
+    min-width: 0;
+    display: block;
+    border-right: 0;
+}
+
+.contact-input-wrap button {
+    color: #222;
+    text-align: left;
+    padding: 12px 21px 12px 15px;
+    height: 48px;
+    white-space: nowrap;
+    z-index: 10;
+    border: 1.5px solid #949494;
+    background: 0 0;
+    border-left: 0;
+    border-radius: 0 24px 24px 0;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+    min-height: 48px;
+    min-width: 80px;
+    vertical-align: middle;
+    display: inline-block;
+    border-left: 0;
+
+}
+
+.contact-spacer {
+    max-width: 480px;
+    margin: 0 auto;
+    margin-top: 12px;
+}
+
+.electricity-con {
+    position: relative;
+    text-align: center;
+    padding: 24px 0;
+    color: #fff;
+    background-color: #3b67d9;
+}
+
+.electricity-wrap {
+    display: inline-block;
+    position: relative;
+}
+
+.electricity-wrap button {
+    border: 0;
+    background: 0 0;
+    align-items: center;
+    display: flex;
+    padding: 1px 0;
+}
+
+.electricity-icon-wrap {
+    flex: auto;
+}
+
+.electricity-icon-span {
+    height: 36px;
+    width: 36px;
+    fill: #fff;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.electricity-icon-span svg {
+    display: block;
+    overflow: hidden;
+}
+
+.electricity-text {
+    margin-left: 12px;
+    flex: auto;
+    color: #fff;
+    text-decoration: underline dashed;
+    text-underline-position: under;
+}
+
+.footer-main {
+    display: flex;
+    color: #fff;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.app-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 36px;
+    background: #122868;
+    flex: 1;
+    justify-content: center;
+}
+
+.app-con a {
+    border-radius: 12px;
+}
+
+.app-icon-span {
+    border-radius: 12px;
+    padding: 6px;
+    background: #f1641e;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.app-icon-span svg {
+    height: 60px;
+    width: 60px;
+    fill: #fff;
+    display: block;
+    overflow: hidden;
+}
+
+.app-text a {
+    min-height: 48px;
+    min-width: 48px;
+    padding: 12px 18px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: none;
+    color: unset;
+    background: #2638c0;
+    border: none;
+    border-radius: 24px;
+    font-weight: 500;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    z-index: 10;
+
+}
+
+.links-con {
+    padding: 36px;
+    padding-bottom: 24px;
+    flex: 2;
+    overflow-x: hidden;
+    display: block;
+    background-color: #2638c0;
+}
+
+.links-wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.links-flex-wrap {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.link-items {
+    padding-right: 18px;
+    flex-grow: 1;
+    flex-basis: 25%;
+    max-width: 25%;
+}
+
+.no-pad {
+    padding: 0;
+}
+
+.link-items h3 {
+    letter-spacing: .08px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    text-align: left;
+    padding-right: 6px;
+    margin-bottom: 12px;
+    display: block;
+
+
+}
+
+.link-items ul {
+ text-align: left;   
+ padding-right: 6px;
+}
+.link-items ul li{
+    width: 100%;
+    padding-bottom: 6px;
+    padding-top: 6px;
+      font-size: 14px;
+    line-height: 1.4;
+    display: block;
+}
+.social-icons-con{
+    text-align: left;
+    margin-top: 12px;
+      
+}
+.social-icons-con ul{
+    margin-top: 18px;
+    display: flex;
+
+}
+.social-icons-con ul li{
+    margin-right: 12px;
+    display: inline-block;
+
+
+
+}
+.social-icon-con ul li a{
+        margin-left: -9px;
+    min-width: 36px;
+    min-height: 36px;
+    font-size: 12.99px;
+    line-height: 1;
+    color: #fff;
+    text-decoration: none;
+    padding: 6px;
+    font-weight: 500;
+        display: inline-block;
+    position: relative;
+    border-radius: 24px;
+
+}
+.social-svg-span{
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    fill: #fff;
+}
+.social-svg-span svg{
+    display: block;
+    overflow: hidden;
+}
+.footer-foot-con{
+    background: #222;
+    border:none;
+    padding: 18px 24px;
+}
+.footer-foot-wrap{
+    padding: 0 36px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-size: 12.99px;
+    line-height: 1.4;
+}
+.lang-con{
+    display: flex;
+}
+.lang-wrap{
+    padding: 9px 15px;
+    margin: 0 -15px;
+    color: #fff;
+}
+.lang-icon-wrap{
+    vertical-align: middle;
+    top:2px;
+    position: relative;
+    display: inline-block;
+}
+.lang-icon{
+    position: relative;
+    display: block;
+}
+.copy-con{
+    display: flex;
+   flex: 1;
+   justify-content: flex-end;
+
+}
+.copy-text{
+    margin-left: 36px;
+    margin-right: 18px;
+    display: inline-block;
+    color: #fff;
+}
+.copy-con ul{
+    display: inline-block;
+}
+.copy-item{
+    margin-right: 18px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: underline;
+
+}
+.last{
+    margin-right: 0;
+}
