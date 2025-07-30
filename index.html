@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="styles/style-footer.css">
     <link rel="stylesheet" href="styles/stytle-header.css">
     <link rel="stylesheet" href="styles/style-filter-overlay.css">
+    <link rel="stylesheet" href="styles/style-mobile.css">
+
 
 
 </head>
@@ -41,8 +43,10 @@
                         Categories
                     </button>
                 </div>
+
             </nav>
-            <div class="search-con width-full ">
+
+            <div class="search-con width-full hide-m">
                 <div class="search-wrap">
                     <div class="search-last-con">
                         <input type="text" name="" id="" class="search-input" placeholder="Search for anything">
@@ -187,6 +191,43 @@
 
 
         </header>
+        <div class="m-header2">
+            <nav class="show-m hide-d">
+                <div class="wt-tool-tip">
+                    <button class="cat-btn btn-all btn-small">
+                        <span class="cat-icon etsy-icon etsy-icon-small">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                                viewBox="0 0 18 18">
+                                <rect x="2" y="8" width="14" height="2"></rect>
+                                <rect x="2" y="13" width="14" height="2"></rect>
+                                <rect x="2" y="3" width="14" height="2"></rect>
+                            </svg>
+                        </span>
+
+                    </button>
+                </div>
+
+            </nav>
+            <div class="search-con width-full hide-d">
+                <div class="search-wrap">
+                    <div class="search-last-con">
+                        <input type="text" name="" id="" class="search-input" placeholder="Search for anything">
+                        <button class="search-btn">
+                            <span class="search-icon-wrap wt-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
+                                    focusable="false">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M10.5 19a8.46 8.46 0 0 0 5.262-1.824l4.865 4.864 1.414-1.414-4.865-4.865A8.5 8.5 0 1 0 10.5 19m0-2a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13">
+                                    </path>
+                                </svg>
+                            </span>
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
         <nav class="show-d hide-m">
             <div class="wt-text-caption nav-wrap">
                 <div class="body-max-width nav-last-wrap">
@@ -1010,9 +1051,9 @@
                         <div class="seemore-container">
                             <div class="seemore-wrap">
                                 <div class="seemore-last">
-                                    <a href="" class="seemore-anchor">
+                                    <button class="seemore-anchor">
                                         Show more
-                                    </a>
+                                    </button>
                                 </div>
 
                             </div>
@@ -1202,13 +1243,19 @@
                                 <h3>Shop</h3>
                                 <div class="">
                                     <ul>
-                                        <li>Gift cards</li>
-                                        <li>Etsy Registry</li>
-                                        <li>Sitemap</li>
-                                        <li>Etsy blog</li>
-                                        <li>Etsy United Kingdom</li>
-                                        <li>Etsy Germany</li>
-                                        <li>Etsy Canada</li>
+                                        <li>
+                                            <span>Gift cards</span>
+                                        </li>
+                                        <li>
+                                            <span>Etsy Registry</span>
+                                        </li>
+                                        <li>
+                                            <span>Sitemap</span>
+                                        </li>
+                                        <li><span>Etsy blog</span></li>
+                                        <li><span>Etsy United Kingdom</span></li>
+                                        <li><span>Etsy Germany</span></li>
+                                        <li><span>Etsy Canada</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1216,10 +1263,10 @@
                                 <h3>Sell</h3>
                                 <div class="">
                                     <ul>
-                                        <li>Sell on Etsy</li>
-                                        <li>Teams</li>
-                                        <li>Forums</li>
-                                        <li>Affiliates & Creators</li>
+                                        <li><span>Sell on Etsy</span></li>
+                                        <li><span>Teams</span></li>
+                                        <li><span>Forums</span></li>
+                                        <li><span>Affiliates & Creators</span></li>
 
                                     </ul>
                                 </div>
@@ -1228,13 +1275,13 @@
                                 <h3>About</h3>
                                 <div class="">
                                     <ul>
-                                        <li>Etsy, Inc.</li>
-                                        <li>Policies</li>
-                                        <li>Investors</li>
-                                        <li>Careers </li>
-                                        <li>Press</li>
-                                        <li>Impact </li>
-                                        <li>Legal imprint </li>
+                                        <li><span>Etsy, Inc.</span></li>
+                                        <li><span>Policies</span></li>
+                                        <li><span>Investors</span></li>
+                                        <li><span>Careers</span> </li>
+                                        <li><span>Press</span></li>
+                                        <li><span>Impact</span> </li>
+                                        <li><span>Legal imprint</span> </li>
                                     </ul>
                                 </div>
                             </div>
@@ -1242,16 +1289,16 @@
                                 <h3>Help</h3>
                                 <div class="">
                                     <ul>
-                                        <li>Help Centre</li>
-                                        <li>Privacy settings</li>
+                                        <li><span>Help Centre</span></li>
+                                        <li><span>Privacy settings</span></li>
 
                                     </ul>
                                 </div>
-                                <div class="width-full">
+                                <div class="width-full so-con">
                                     <div class="social-icons-con">
                                         <ul>
                                             <li>
-                                                <a href="" class="social-anchor btn-all">
+                                                <a href="" class="social-anchor">
                                                     <span class="social-svg-span">
                                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                             aria-hidden="true" focusable="false">
@@ -1267,20 +1314,20 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="" class="social-anchor btn-all">
+                                                <a href="" class="social-anchor ">
                                                     <span class="social-svg-span">
                                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                             aria-hidden="true" focusable="false">
                                                             <path
                                                                 d="M20,5V19a1.007,1.007,0,0,1-1,1H15V13.776h2l0.336-2.3H15V9.659a0.912,0.912,0,0,1,1-1.031h1.5V6.55a11.284,11.284,0,0,0-1.641-.109c-2.2,0-3.3,1.219-3.3,3.039v1.992h-2v2.3h2V20H5a1.007,1.007,0,0,1-1-1V5A1.007,1.007,0,0,1,5,4H19A1.007,1.007,0,0,1,20,5Z">
                                                             </path>
-                                                        </svg>\
+                                                        </svg>
 
                                                     </span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="" class="social-anchor btn-all">
+                                                <a href="" class="social-anchor">
                                                     <span class="social-svg-span">
                                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                             aria-hidden="true" focusable="false">
@@ -1292,7 +1339,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="" class="social-anchor btn-all">
+                                                <a href="" class="social-anchor" style="padding-left: 9.5px;">
                                                     <span class="social-svg-span">
                                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                             aria-hidden="true" focusable="false">
@@ -1408,24 +1455,140 @@
         </footer>
     </div>
 
-    <div class="overlay-container">
+    <div class="overlay-container ">
         <div class="filters-container">
             <div>
                 <button class="cross-con">
-                    <span class="cross-span"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
-                            focusable="false">
+                    <span class="cross-span"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            aria-hidden="true" focusable="false">
                             <path
                                 d="M13.414,12l6.293-6.293a1,1,0,0,0-1.414-1.414L12,10.586,5.707,4.293A1,1,0,0,0,4.293,5.707L10.586,12,4.293,18.293a1,1,0,1,0,1.414,1.414L12,13.414l6.293,6.293a1,1,0,0,0,1.414-1.414Z">
                             </path>
                         </svg></span>
                 </button>
-                <fieldset class="set">
+                <fieldset class="set check">
                     <h3>
                         Special offers
                     </h3>
-                    <div class="set">
-                        <input type="checkbox" name="" id="">
-                        <label for="">FREE delivery</label>
+                    <div class="set-con">
+                        <div class="set-wrap">
+                            <input type="checkbox" name="" id="">
+                            <label for="">FREE delivery</label>
+                        </div>
+                    </div>
+                    <div class="set-con">
+                        <div class="set-wrap">
+                            <input type="checkbox" name="" id="" checked>
+                            <label for="">On sale</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="set radio">
+                    <h3>
+                        Item type
+                    </h3>
+                    <div class="set-con">
+                        <div class="set-wrap">
+                            <input type="radio" name="type" id="" checked value="all">
+                            <label for="">All items</label>
+                        </div>
+                    </div>
+                    <div class="set-con">
+                        <div class="set-wrap ">
+                            <input type="radio" name="type" id="" value="vintage">
+                            <label for="">Vintage</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="set radio">
+                    <h3>
+                        Price (₹)
+                    </h3>
+                    <div class="set-con">
+                        <div class="set-wrap">
+                            <input type="radio" name="price" id="any" value="any" checked>
+                            <label for="">Any price</label>
+                        </div>
+                    </div>
+                    <div class="set-con">
+                        <div class="set-wrap">
+                            <input type="radio" name="price" id="500" value="0-1000">
+                            <label for="">Under ₹1000</label>
+                        </div>
+                    </div>
+                    <div class="set-con">
+                        <div class="set-wrap">
+                            <input type="radio" name="price" id="" value="1000-2000">
+                            <label for=""> ₹1000 to ₹2000</label>
+                        </div>
+                    </div>
+
+                    <div class="set-con">
+                        <div class="set-wrap">
+                            <input type="radio" name="price" id="" value="2000-3000">
+                            <label for="">₹2000 to ₹3000</label>
+                        </div>
+                    </div>
+                    <div class="set-con">
+                        <div class="set-wrap">
+                            <input type="radio" name="price" id="" value="3000-99999">
+                            <label for="">Over ₹3000</label>
+                        </div>
+                    </div>
+                    <div class="set-con">
+                        <div class="set-wrap">
+                            <input type="radio" name="price" id="" value="custom">
+                            <label for="">Custom</label>
+                        </div>
+                    </div>
+
+                    <div class="custom-wrap">
+                        <div class="range-wrap">
+                            <div class="range">
+                                <div class="low">
+                                    <input type="text" placeholder="Low" class="low-value">
+                                </div>
+                                <div class="to">
+                                    <div>to</div>
+                                </div>
+                                <div class="high">
+                                    <input type="text" placeholder="High" class="high-value">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tick-wrap">
+                            <button class="tick-btn">
+                                <span class="tick-span">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
+                                        focusable="false">
+                                        <path
+                                            d="M9.057,20.471L2.293,13.707a1,1,0,0,1,1.414-1.414l5.236,5.236,11.3-13.18a1,1,0,1,1,1.518,1.3Z">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <fieldset class="set check">
+                    <h3>
+                        Oredering options
+                    </h3>
+                    <div class="set-con">
+                        <div class="set-wrap">
+                            <input type="checkbox" name="" id="">
+                            <label for="">Accepts Etsy gift cards</label>
+                        </div>
+                    </div>
+                    <div class="set-con">
+                        <div class="set-wrap">
+                            <input type="checkbox" name="" id="">
+                            <label for="">Can be gift-wrapped</label>
+                        </div>
                     </div>
                 </fieldset>
             </div>
@@ -1434,6 +1597,9 @@
 
 
     <script type="module" src="scripts/render.js"></script>
+    <!-- <script type="module" src="scripts/filter.js"></script> -->
+    <script type="module" src="scripts/seemore.js"></script>
+
 </body>
 
 </html>

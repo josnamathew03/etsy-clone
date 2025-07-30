@@ -1,0 +1,9 @@
+@media screen and (max-width:998px) {
+    .hide-m{
+        display: none;
+
+    }
+    .show-m{
+        display: block;
+    }
+}

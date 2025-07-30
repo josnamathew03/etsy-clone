@@ -117,6 +117,9 @@ li {
 .show-d {
     display: block;
 }
+.hide-d{
+    display: none !important;
+}
 
 .wt-tool-tip {
     display: inline-block;

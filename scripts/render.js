@@ -1,19 +1,14 @@
 import { loadProducts, products } from "./products.js";
-
-loadProducts().then(() => {
-    function renderProducts() {
+import { filter } from "./filter.js";
 
 
-        let productshtml = ''
-        let productshtml1 = ''
+export function renderProductsPersonalized(products, number) {
+    let productshtml = ''
+    const sliced = products.slice(0, number)
+    sliced.forEach((product) => {
+        let discount = Math.round((product.original - product.price) / product.original * 100)
 
-
-
-
-        products.forEach((product) => {
-            let discount = Math.round((product.original - product.price) / product.original * 100)
-
-            productshtml += `  <li>
+        productshtml += `  <li>
                                     <a href="" class="products-anchor">
                                         <div class="product-image-con">
                                             <div class="product-image-wrap">
@@ -52,8 +47,8 @@ loadProducts().then(() => {
                                                     <span class="pro-rating-text pro-rating-dot">.</span>
                                                     <div class="brand-con">
                                                     ${product.showBrandIcon
-                    ?
-                    `<span class="brand-span">
+                ?
+                `<span class="brand-span">
                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                                 aria-hidden="true" focusable="false">
                                                                 <path
@@ -64,11 +59,11 @@ loadProducts().then(() => {
                                                         <span class="brand-text">
                                                             ${product.brand}
                                                         </span>`
-                    :
-                    `<span class="brand-text">
+                :
+                `<span class="brand-text">
                                                             ${product.brand}
                                                         </span>`
-                }
+            }
                                                     </div>
 
                                                 </div>
@@ -76,8 +71,8 @@ loadProducts().then(() => {
                                             </div>
                                             <div class="pro-price-con price-text">
                                                                              ${product.original
-                                                ?
-                                                `
+                ?
+                `
                                                 <p class="price-p">
                                                     <span class="price-span">
                                                         <span>₹</span>
@@ -95,8 +90,8 @@ loadProducts().then(() => {
                                                             </span>
                                                         </span>
                                                     </p>`
-                                                    :
-                                                    `
+                :
+                `
                                                     <p class="price-p">
                                                         <span class="">
                                                             <span>₹</span>
@@ -108,7 +103,7 @@ loadProducts().then(() => {
                                                             Eligible orders get 20% off
                                                          </button>
                                                     </span>`
-                }
+            }
 
                                             </div>
 
@@ -121,8 +116,35 @@ loadProducts().then(() => {
                                     </a>
                                 </li>`
 
-            // ---------------------------------------------------------
-            productshtml1 += `  <li>
+        // ---------------------------------------------------------
+        const filterBtn = document.querySelector(".filter-btn")
+        const overlayContainer = document.querySelector(".overlay-container")
+
+        filterBtn.addEventListener('click', () => {
+            overlayContainer.style.display = "block"
+            filter()
+        })
+
+
+
+    })
+
+
+    const productContainer = document.querySelector(".products-flex")
+    productContainer.innerHTML = productshtml
+
+
+
+}
+
+function renderOther() {
+    let productshtml1 = ''
+    const sliced = products.slice(0, 12)
+
+    sliced.forEach((product) => {
+        let discount = Math.round((product.original - product.price) / product.original * 100)
+
+        productshtml1 += `  <li>
                                     <a href="" class="products-anchor">
                                         <div class="product-image-con">
                                             <div class="product-image-wrap">
@@ -161,8 +183,8 @@ loadProducts().then(() => {
                                                     <span class="pro-rating-text pro-rating-dot">.</span>
                                                     <div class="brand-con">
                                                     ${product.showBrandIcon
-                    ?
-                    `<span class="brand-span">
+                ?
+                `<span class="brand-span">
                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                                 aria-hidden="true" focusable="false">
                                                                 <path
@@ -173,11 +195,11 @@ loadProducts().then(() => {
                                                         <span class="brand-text">
                                                             ${product.brand}
                                                         </span>`
-                    :
-                    `<span class="brand-text">
+                :
+                `<span class="brand-text">
                                                             ${product.brand}
                                                         </span>`
-                }
+            }
                                                     </div>
 
                                                 </div>
@@ -214,16 +236,14 @@ loadProducts().then(() => {
                                         More like this
                                     </a>
                                 </li>`
+    })
+    const productBackContainer = document.querySelector(".products-back-flex")
+    productBackContainer.innerHTML = productshtml1
+    const productClassContainer = document.querySelector(".products-class-flex")
+    productClassContainer.innerHTML = productshtml1
+}
 
-
-        })
-
-        const productContainer = document.querySelector(".products-flex")
-        productContainer.innerHTML = productshtml
-        const productBackContainer = document.querySelector(".products-back-flex")
-        productBackContainer.innerHTML = productshtml1
-        const productClassContainer = document.querySelector(".products-class-flex")
-        productClassContainer.innerHTML = productshtml1
-    }
-    renderProducts()
+loadProducts().then(() => {
+    renderProductsPersonalized(products, 12)
+    renderOther()
 })

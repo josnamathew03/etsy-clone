@@ -14,7 +14,7 @@ footer {
 
 .contact-wrap {
     text-align: center;
-    padding-top: 36px;
+    padding-top: 36.53px;
     padding-left: 24px;
     padding-right: 24px;
 }
@@ -158,7 +158,7 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 18px;
-    padding: 18px 36px;
+    padding: 18px 36.22px;
     background: #122868;
     flex: 1;
     justify-content: center;
@@ -260,24 +260,36 @@ footer {
     line-height: 1.4;
     display: block;
 }
+.link-items ul li span{
+    font-size: 12.99px;
+}
+.so-con{
+    margin-top: 12px;
+}
 .social-icons-con{
     text-align: left;
     margin-top: 12px;
       
 }
+
 .social-icons-con ul{
     margin-top: 18px;
-    display: flex;
+    /* display: flex; */
+    padding: 0;
+    text-align: left;
+
 
 }
 .social-icons-con ul li{
     margin-right: 12px;
     display: inline-block;
-
+    padding: 0;
+    /* align-self: center; */
+    width: auto;
 
 
 }
-.social-icon-con ul li a{
+.social-anchor{
         margin-left: -9px;
     min-width: 36px;
     min-height: 36px;
@@ -291,6 +303,34 @@ footer {
     position: relative;
     border-radius: 24px;
 
+}
+.social-anchor::after {
+    content: "";
+    border-radius: 24px;
+    z-index: -1;
+    transform: scale(.7) rotate(.0001deg);
+    /* -webkit-backface-visibility: hidden; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: left;
+
+}
+
+.social-anchor::before {
+    content: "";
+    border-radius: 24px;
+    z-index: -1;
+    transform: scale(.7) rotate(.0001deg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    box-sizing: border-box;
 }
 .social-svg-span{
     height: 24px;
