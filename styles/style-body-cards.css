@@ -19,7 +19,7 @@
     font-weight: 300;
     line-height: 1.1;
     text-align: center;
-
+    color: #222;
 }
 
 .filter-con {
@@ -96,6 +96,7 @@
 .filter-icon {
     height: 18px;
     width: 18px;
+    fill: #222;
 }
 
 .filter-text {
@@ -114,7 +115,7 @@
 
 .products-container {
     padding: 6px 12px 12px;
-    background-color: #fff;
+    background-color: #fff; 
 
 }
 
@@ -128,8 +129,8 @@
 .products-flex li ,.products-back-flex li,.products-class-flex li{
     padding: 9px;
     flex-grow: 1;
-    flex-basis: 25%;
-    max-width: 25%;
+    flex-basis: 25% !important;
+    max-width: 25% !important;
     position: relative;
     order: 0;
 }
@@ -260,6 +261,7 @@
     height: 18px;
     width: 18px;
     margin: 0 2px;
+    fill: #222;
 }
 
 .pro-rating-p {
@@ -338,11 +340,13 @@
 .ori-price-p {
     padding-top: 1px;
     font-size: 12px;
+    letter-spacing: .1299px;
 }
 
 .ori-price-span {
     text-decoration: line-through;
     color: #595959;
+    display: inline-block;
 }
 
 .off-span {

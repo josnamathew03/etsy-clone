@@ -407,6 +407,7 @@ li {
     bottom: 0;
     left: 0;
     right: 0;
+    border-bottom: 2px solid #0e0e0e2e;
 }
 
 .nav-wrap {

@@ -145,13 +145,13 @@
 .featured-flex-item {
     padding: 9px;
     flex-grow: 1;
-    flex-basis: 25%;
-    max-width: 25%;
+    flex-basis: 25% !important;
+    max-width: 25% !important;
 }
 
 .featured-item {
     width: 100%;
-    color: inherit;
+    color: #222;
     /* font: inherit; */
     text-align: left;
     cursor: pointer;
@@ -282,7 +282,7 @@ box-shadow:
     min-width: 0 !important;
     overflow: hidden;
     margin-right: 12px;
-    color: inherit;
+    color: #222;
     text-decoration: none;
 
 
@@ -358,7 +358,7 @@ box-shadow:
     height: 14px;
     position: relative;
     bottom: 1px;
-    fill: currentColor;
+    fill: #222;
     vertical-align: middle;
     display: inline-block;
     bottom: 1px;

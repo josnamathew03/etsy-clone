@@ -30,6 +30,7 @@ footer {
     font-weight: 500;
     line-height: 1.25;
     margin-bottom: 12px;
+    color: #222;
 }
 
 .contact-input-con {
@@ -73,7 +74,7 @@ footer {
 .contact-input-wrap button {
     color: #222;
     text-align: left;
-    padding: 12px 21px 12px 15px;
+    padding: 12.7px 21px 12px 15px;
     height: 48px;
     white-space: nowrap;
     z-index: 10;
@@ -206,8 +207,9 @@ footer {
 }
 
 .links-con {
-    padding: 36px;
-    padding-bottom: 24px;
+    /* padding-top: 35.8px !important; */
+    padding: 35.8px 36px 24px 36px !important;
+    /* padding-bottom: 24px !important; */
     flex: 2;
     overflow-x: hidden;
     display: block;
@@ -279,15 +281,19 @@ footer {
     text-align: left;
 
 
+
 }
 .social-icons-con ul li{
-    margin-right: 12px;
+    margin-right: 16px;
     display: inline-block;
     padding: 0;
     /* align-self: center; */
     width: auto;
 
 
+}
+.social-icons-con .last{
+    margin-right: 0;
 }
 .social-anchor{
         margin-left: -9px;
@@ -362,6 +368,7 @@ footer {
     display: flex;
 }
 .lang-wrap{
+    padding-top: 9.2px;
     padding: 9px 15px;
     margin: 0 -15px;
     color: #fff;
