@@ -351,6 +351,7 @@ li {
     vertical-align: middle;
     /* top: 2px; */
     position: relative;
+
     display: inline-block;
 }
 
@@ -402,7 +403,6 @@ li {
 /* ------------------------------------------------ */
 .nav-last-wrap::after {
     content: "";
-    border-bottom: 2px solid #0e0e0e2e;
     position: absolute;
     bottom: 0;
     left: 0;

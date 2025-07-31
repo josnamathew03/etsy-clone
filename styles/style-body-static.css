@@ -11,6 +11,7 @@
     line-height: 1.05;
     padding-bottom: 12px;
     letter-spacing: 0;
+    color: #222;
     font-family: Guardian-EgypTT, Charter, Charter Bitstream, Cambria, Noto Serif Light, Droid Serif, Georgia, "serif";
 
 }
@@ -22,6 +23,8 @@
     padding-bottom: 12px;
     font-family: Graphik Webfont, -apple-system, Helvetica Neue, Droid Sans, Arial, "sans-serif";
     line-height: 1.4;
+    color: #222;
+
 }
 
 .bg-color {
@@ -66,7 +69,7 @@
     font-weight: 700 !important;
     position: relative;
     display: block;
-    color: black;
+    color: #222;
 }
 
 .shopping-window-a::before {
@@ -105,6 +108,9 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
+}
+.shopping-window-a p{
+    display: inline;
 }
 
 /* ------------------------------------------------------------------------- */

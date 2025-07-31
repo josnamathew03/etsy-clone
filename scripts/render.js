@@ -1,11 +1,10 @@
 import { loadProducts, products } from "./products.js";
 import { filter } from "./filter.js";
 
-
-export function renderProductsPersonalized(products, number) {
+let visibleNum = 12
+export function renderProductsPersonalized(products) {
     let productshtml = ''
-    const sliced = products.slice(0, number)
-    sliced.forEach((product) => {
+    products.forEach((product) => {
         let discount = Math.round((product.original - product.price) / product.original * 100)
 
         productshtml += `  <li>
@@ -126,6 +125,9 @@ export function renderProductsPersonalized(products, number) {
         })
 
 
+        
+
+
 
     })
 
@@ -244,6 +246,7 @@ function renderOther() {
 }
 
 loadProducts().then(() => {
-    renderProductsPersonalized(products, 12)
+    
+    renderProductsPersonalized(products.slice(0,12))
     renderOther()
 })

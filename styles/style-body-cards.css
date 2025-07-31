@@ -425,8 +425,11 @@
     display: inline-block;
     background-size: cover;
 }
+.seeless-container{
+    display: none;
+}
 
-.seemore-container{
+.seemore-container,.seeless-container{
     background-color: #fff;
     padding-left: 18px;
     padding-right: 18px;
@@ -446,7 +449,7 @@
     margin-left: auto;
     margin-right: auto;
 }
-.seemore-anchor{
+.seemore-anchor,.seeless-anchor{
     color: #222;
     text-decoration: none;
         font: inherit;

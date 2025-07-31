@@ -1,6 +1,7 @@
 import { products } from "./products.js"
 import { renderProductsPersonalized } from "./render.js"
 
+
 export function filter() {
 
     const overlayContainer = document.querySelector(".overlay-container")
@@ -28,7 +29,7 @@ export function filter() {
             let min = 0, max = 9999
             const value = radio.value
             if (value === 'any') {
-                filteredProducts = products
+                filteredProducts = products.slice(0,12)
             }
             else if (value === 'custom') {
                 customRange()
@@ -53,7 +54,7 @@ export function filter() {
 
             }
             closeOverlay()
-            renderProductsPersonalized(filteredProducts, 12)
+            renderProductsPersonalized(filteredProducts)
 
         })
     })
@@ -68,7 +69,7 @@ export function filter() {
             })
             // console.log(filteredProducts)
             closeOverlay()
-            renderProductsPersonalized(filteredProducts, 12)
+            renderProductsPersonalized(filteredProducts)
         })
     }
 
@@ -81,7 +82,7 @@ export function filter() {
             const value = radio.value
             // console.log(value)
             if (value === 'all') {
-                filteredProducts = products
+                filteredProducts = products.slice(0,12)
             }
             else {
                 filteredProducts = sliced.filter((product) => {
@@ -89,7 +90,7 @@ export function filter() {
                 })
             }
             closeOverlay()
-            renderProductsPersonalized(filteredProducts, 12)
+            renderProductsPersonalized(filteredProducts)
         })
     })
 }

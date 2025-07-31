@@ -1,8 +1,39 @@
-import { products } from "./products.js";
+import { products, loadProducts } from "./products.js";
 import { renderProductsPersonalized } from "./render.js";
+let fixedCount = 12
+let stepCount = 6
+loadProducts().then(() => {
+    function seemore() {
+        const seemoreBtn = document.querySelector('.seemore-anchor')
+        const seeLessBtn = document.querySelector('.seeless-anchor')
 
-const seemoreBtn  = document.querySelector('.seemore-anchor')
+        const seemoreCon = document.querySelector('.seemore-container')
+        const seelessCon = document.querySelector('.seeless-container')
 
-seemoreBtn.addEventListener('click',()=>{
-    renderProductsPersonalized(products,18)
+
+
+
+        console.log(fixedCount, products.length)
+        console.log(products.length >= fixedCount)
+
+
+
+        seemoreBtn.addEventListener('click', () => {
+            if (products.length >= fixedCount+5) {
+
+                console.log("tap")
+                fixedCount += stepCount
+                const slicedProducts = products.slice(0, fixedCount)
+                renderProductsPersonalized(slicedProducts)
+            }
+            else {
+                seemoreCon.style.display = "none"
+            }
+
+        })
+
+
+    }
+    seemore()
+
 })
