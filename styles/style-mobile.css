@@ -520,18 +520,16 @@
     .products-class-flex li {
         padding: 3px;
         padding-bottom: 3.035px;
-
         flex-basis: 50% !important;
         max-width: 50% !important;
     }
-
 
 }
 
 @media screen and (max-width:488px) {
 
-    .logo-wrap {
-        padding: 0;
+    .logo-wrap {                          
+        padding: 0; 
     }
 
     .logo {
@@ -543,7 +541,7 @@
         flex-basis: 100% !important;
         max-width: 100% !important;
         padding: 6px;
-        padding-bottom: 7.8px;
+        padding-bottom: 7.8px;  
 
     }
 }

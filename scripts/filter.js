@@ -14,7 +14,7 @@ export function filter() {
         closeOverlay()
     })
 
-    // const sliced = products.slice(0, 12)
+    const sliced = products.slice(0, 12)
     // console.log(sliced)
     const priceRadios = document.querySelectorAll('input[name="price"]')
     const lowInput = document.querySelector('.low-value')
@@ -33,7 +33,7 @@ export function filter() {
             }
             else if (value === 'custom') {
                 customRange()
-
+ 
             }
             else {
                 [min, max] = value.split('-').map(Number)
