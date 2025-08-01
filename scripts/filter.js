@@ -2,8 +2,8 @@ import { products } from "./products.js"
 import { renderProductsPersonalized } from "./render.js"
 
 
-export function filter() {
-
+export function filter(r1, r2, render) {
+    // document.body.style.overflow = "hidden"
     const overlayContainer = document.querySelector(".overlay-container")
     const crossBtn = document.querySelector(".cross-con")
     function closeOverlay() {
@@ -14,7 +14,7 @@ export function filter() {
         closeOverlay()
     })
 
-    const sliced = products.slice(0, 12)
+    const sliced = products.slice(r1, r2)
     // console.log(sliced)
     const priceRadios = document.querySelectorAll('input[name="price"]')
     const lowInput = document.querySelector('.low-value')
@@ -29,11 +29,13 @@ export function filter() {
             let min = 0, max = 9999
             const value = radio.value
             if (value === 'any') {
-                filteredProducts = products.slice(0,12)
+                filteredProducts = sliced
+                closeOverlay()
+
             }
             else if (value === 'custom') {
                 customRange()
- 
+
             }
             else {
                 [min, max] = value.split('-').map(Number)
@@ -51,10 +53,11 @@ export function filter() {
                     return product.price >= min && product.price <= max
                 })
                 // console.log(filteredProducts)
+                closeOverlay()
+
 
             }
-            closeOverlay()
-            renderProductsPersonalized(filteredProducts)
+            render(filteredProducts)
 
         })
     })
@@ -69,7 +72,7 @@ export function filter() {
             })
             // console.log(filteredProducts)
             closeOverlay()
-            renderProductsPersonalized(filteredProducts)
+            render(filteredProducts)
         })
     }
 
@@ -82,7 +85,7 @@ export function filter() {
             const value = radio.value
             // console.log(value)
             if (value === 'all') {
-                filteredProducts = products.slice(0,12)
+                filteredProducts = sliced
             }
             else {
                 filteredProducts = sliced.filter((product) => {
@@ -90,7 +93,11 @@ export function filter() {
                 })
             }
             closeOverlay()
-            renderProductsPersonalized(filteredProducts)
+            render(filteredProducts)
         })
     })
 }
+
+
+
+

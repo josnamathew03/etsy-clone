@@ -35,7 +35,7 @@
     padding-right: 6px;
 }
 
-.filter-btn {
+.filter-btn,.filter-btn-back,.filter-btn-class {
     min-height: 36px;
     min-width: 36px;
     display: flex;
@@ -58,7 +58,7 @@
 
 }
 
-.filter-btn::before {
+.filter-btn::before,.filter-btn-back::before,.filter-btn-class::before {
     content: "";
     border: 1.5px solid #0000;
     box-shadow: 0px 1px 3px 0px #0000004d, 0px 4px 8px 3px #00000026;
@@ -75,7 +75,7 @@
     
 }
 
-.filter-btn::after {
+.filter-btn::after,.filter-btn-back::after,.filter-btn-class::after {
     content: "";
     border: 1.5px solid #222;
     background-color: #0000;
