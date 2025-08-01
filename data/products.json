@@ -240,7 +240,7 @@
             "count":347
         },
         "showBrandIcon":false,
-        "brand":"GinaBabyGiftShop",
+        "brand":"GinaBabyGift",
         "price":2599,
         "original": 6043,
         "type":"normal"
@@ -252,7 +252,7 @@
             "star": 5.0,
             "count":"2.5k"
         },
-        "showBrandIcon":true,
+        "showBrandIcon":false,
         "brand":"EmmaDoannn",
         "price":1056,
         "original": "",
@@ -369,7 +369,7 @@
             "star": 5.0,
             "count":"2.5k"
         },
-        "showBrandIcon":false,
+        "showBrandIcon":true,
         "brand":"EmmaDoan",
         "price":1056,
         "original": "",

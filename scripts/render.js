@@ -1,7 +1,9 @@
 import { loadProducts, products } from "./products.js";
 import { filter } from "./filter.js";
 
-let visibleNum = 12
+// let visibleNum = 12
+const overlayContainer = document.querySelector(".overlay-container")
+
 export function renderProductsPersonalized(products) {
     let productshtml = ''
     products.forEach((product) => {
@@ -116,16 +118,21 @@ export function renderProductsPersonalized(products) {
                                 </li>`
 
         // ---------------------------------------------------------
-        const filterBtn = document.querySelector(".filter-btn")
-        const overlayContainer = document.querySelector(".overlay-container")
+        // const filterBtn = document.querySelectorAll(".filter-btn")
+        // const overlayContainer = document.querySelector(".overlay-container")
 
-        filterBtn.addEventListener('click', () => {
-            overlayContainer.style.display = "block"
-            filter()
-        })
+        // filterBtn.forEach((buton) => {
+        //     buton.addEventListener('click', () => {
+        //         overlayContainer.style.display = "block"
+        //         filter()
+        //     })
+        // })
 
 
-        
+
+
+
+
 
 
 
@@ -136,16 +143,22 @@ export function renderProductsPersonalized(products) {
     productContainer.innerHTML = productshtml
 
 
+    const filterBtn = document.querySelector(".filter-btn")
+
+    filterBtn.addEventListener('click', () => {
+        overlayContainer.style.display = "block"
+        filter(0,12,renderProductsPersonalized)
+    })
 
 }
 
-function renderOther() {
+export function renderBack(products) {
     let productshtml1 = ''
-    const sliced = products.slice(12, 24)
+    // const sliced = products.slice(12, 24)
 
-    sliced.forEach((product) => {
+    products.forEach((product) => {
         let discount = Math.round((product.original - product.price) / product.original * 100)
-        console.log(product)
+        // console.log(product)
         productshtml1 += `  <li>
                                     <a href="" class="products-anchor">
                                         <div class="product-image-con">
@@ -197,11 +210,11 @@ function renderOther() {
                                                         <span class="brand-text">
                                                             ${product.brand}
                                                         </span>`
-                                                        :
-                                                        `<span class="brand-text">
+                :
+                `<span class="brand-text">
                                                          ${product.brand}
                                                            </span>`
-                                                    }
+            }
                                                     </div>
 
                                                 </div>
@@ -242,13 +255,21 @@ function renderOther() {
     const productBackContainer = document.querySelector(".products-back-flex")
     productBackContainer.innerHTML = productshtml1
 
+    const filterBtnBack = document.querySelector(".filter-btn-back")
 
+    filterBtnBack.addEventListener('click', () => {
+        overlayContainer.style.display = "block"
+        filter(12,24,renderBack)
+    })
+}
+
+export function renderClass(products) {
     let productshtml2 = ''
-    const sliced2 = products.slice(24, 36)
+    // const sliced2 = products.slice(24, 36)
 
-    sliced2.forEach((product) => {
+    products.forEach((product) => {
         let discount = Math.round((product.original - product.price) / product.original * 100)
-        console.log(product)
+        // console.log(product)
         productshtml2 += `  <li>
                                     <a href="" class="products-anchor">
                                         <div class="product-image-con">
@@ -300,11 +321,11 @@ function renderOther() {
                                                         <span class="brand-text">
                                                             ${product.brand}
                                                         </span>`
-                                                        :
-                                                        `<span class="brand-text">
+                :
+                `<span class="brand-text">
                                                          ${product.brand}
                                                            </span>`
-                                                    }
+            }
                                                     </div>
 
                                                 </div>
@@ -344,10 +365,23 @@ function renderOther() {
     })
     const productClassContainer = document.querySelector(".products-class-flex")
     productClassContainer.innerHTML = productshtml2
+
+    const filterBtnClass = document.querySelector(".filter-btn-class")
+
+    filterBtnClass.addEventListener('click', () => {
+        overlayContainer.style.display = "block"
+        filter(24,36,renderClass)
+    })
+    
 }
 
 loadProducts().then(() => {
-    
-    renderProductsPersonalized(products.slice(0,12))
-    renderOther()
+
+    renderProductsPersonalized(products.slice(0, 12))
+    renderBack(products.slice(12, 24))
+    renderClass(products.slice(24, 36))
 })
+
+
+
+

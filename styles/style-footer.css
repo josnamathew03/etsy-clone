@@ -204,13 +204,14 @@ footer {
     vertical-align: middle;
     z-index: 10;
 
-}
+}                             
 
 .links-con {
     /* padding-top: 35.8px !important; */
     padding: 35.8px 36px 24px 36px !important;
     /* padding-bottom: 24px !important; */
     flex: 2;
+    padding-left: 36px !important;
     overflow-x: hidden;
     display: block;
     background-color: #2638c0;
