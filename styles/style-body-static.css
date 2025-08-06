@@ -322,10 +322,10 @@ box-shadow:
     min-width: 0 !important;
     overflow: hidden !important;
     text-align: left;
-}
+}       
 
 .stars-con {
-    padding-top: .8px;
+        padding-top: 2.5px;
     align-items: center;
     flex-wrap: wrap;
     display: inline-flex;
